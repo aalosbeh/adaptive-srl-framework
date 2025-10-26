@@ -1,0 +1,140 @@
+# Default Configuration for Adaptive Multi-Modal SRL Framework
+
+model:
+  # Common embedding dimension
+  common_dim: 256
+  
+  # Text encoder configuration
+  text_encoder:
+    model_name: "bert-base-uncased"
+    hidden_size: 768
+    max_length: 512
+  
+  # Visual encoder configuration
+  visual_encoder:
+    cnn_backbone: "resnet50"
+    cnn_output_dim: 2048
+    lstm_hidden: 512
+    lstm_layers: 2
+    dropout: 0.3
+  
+  # Temporal encoder configuration
+  temporal_encoder:
+    input_dim: 50
+    hidden_dim: 128
+    output_dim: 256
+    dilations: [1, 2, 4, 8, 16]
+  
+  # Graph encoder configuration
+  graph_encoder:
+    input_dim: 64
+    hidden_dim: 128
+    num_heads: 4
+  
+  # Attention configuration
+  attention:
+    num_heads: 8
+    dropout: 0.1
+
+# Training configuration
+training:
+  # Federated learning settings
+  federated:
+    num_institutions: 10
+    num_rounds: 50
+    local_epochs: 5
+    batch_size: 64
+    
+  # Reinforcement learning settings
+  rl:
+    state_dim: 8
+    action_dim: 4
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_epsilon: 0.2
+    entropy_coef: 0.01
+    value_coef: 0.5
+    max_grad_norm: 0.5
+    lr_policy: 0.0003
+    lr_value: 0.001
+  
+  # Privacy settings
+  privacy:
+    epsilon: 1.0
+    delta: 0.00001
+    noise_multiplier: 1.1
+    clip_norm: 1.0
+  
+  # Optimization settings
+  optimizer:
+    type: "adam"
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    betas: [0.9, 0.999]
+
+# Data configuration
+data:
+  num_learners: 1000
+  num_days: 180
+  domains:
+    - mathematics
+    - science
+    - programming
+    - language_arts
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+
+# Intervention configuration
+intervention:
+  types:
+    - content
+    - strategy
+    - feedback
+    - social
+  
+  timing:
+    min_interval: 300  # seconds
+    max_per_session: 5
+  
+  adaptation:
+    threshold_low: 0.3
+    threshold_high: 0.7
+
+# Evaluation configuration
+evaluation:
+  metrics:
+    - metacognitive_accuracy
+    - intervention_effectiveness
+    - privacy_score
+    - learning_gain
+    - engagement_improvement
+  
+  save_results: true
+  results_dir: "results"
+  
+  visualization:
+    plot_convergence: true
+    plot_attention_weights: true
+    plot_state_estimation: true
+
+# Logging configuration
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  tensorboard: true
+  wandb:
+    enabled: false
+    project: "adaptive-srl-framework"
+    entity: null
+
+# Device configuration
+device:
+  use_cuda: true
+  cuda_device: 0
+  num_workers: 4
+  pin_memory: true
+
+# Reproducibility
+random_seed: 42
+
