@@ -8,7 +8,7 @@ A federated deep reinforcement learning framework for personalized self-regulate
 
 ## Overview
 
-This repository contains the implementation of the Adaptive Multi-Modal AI Framework described in the paper "Adaptive Multi-Modal AI Framework for Personalized Self-Regulated Learning in Generation Z: A Federated Deep Reinforcement Learning Approach" by Anas AlSobeh, Amani Shatnawi, and Ahmad Asfour.
+This repository contains the implementation of the Adaptive Multi-Modal AI Framework described in the paper "Adaptive Multi-Modal AI Framework for Personalized Self-Regulated Learning in Generation Z: A Federated Deep Reinforcement Learning Approach".
 
 The framework integrates:
 - **Multi-modal learning analytics** (text, visual, temporal, graph)
