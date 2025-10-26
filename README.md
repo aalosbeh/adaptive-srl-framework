@@ -19,12 +19,12 @@ The framework integrates:
 
 ## Key Features
 
-- 🔒 **Privacy-Preserving**: Federated learning with differential privacy guarantees
-- 🧠 **Multi-Modal**: Integrates text, visual, temporal, and graph data
-- 🎯 **Personalized**: Adaptive interventions based on learner state
-- 📊 **Metacognitive**: Real-time estimation of awareness, monitoring, and control
-- 🚀 **Scalable**: Distributed architecture for multiple institutions
-- 🔬 **Research-Ready**: Comprehensive evaluation metrics and baselines
+ **Privacy-Preserving**: Federated learning with differential privacy guarantees
+ **Multi-Modal**: Integrates text, visual, temporal, and graph data
+ **Personalized**: Adaptive interventions based on learner state
+ **Metacognitive**: Real-time estimation of awareness, monitoring, and control
+ **Scalable**: Distributed architecture for multiple institutions
+ **Research-Ready**: Comprehensive evaluation metrics and baselines
 
 ## Installation
 
@@ -144,8 +144,6 @@ adaptive-srl-framework/
 ├── configs/               # Configuration files
 ├── data/                  # Dataset storage
 ├── models/                # Trained model checkpoints
-├── tests/                 # Unit and integration tests
-├── docs/                  # Documentation
 ├── examples/              # Example scripts and notebooks
 ├── requirements.txt       # Python dependencies
 ├── setup.py               # Package installation script
